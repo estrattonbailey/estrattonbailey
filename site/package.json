@@ -7,7 +7,7 @@
     "client:watch": "webpack -w",
     "client:build": "webpack -p",
     "site:watch": "npm run static:copy && presta watch",
-    "site:build": "presta build --inc",
+    "site:build": "presta build",
     "lint:format": "prettier-standard --format"
   },
   "dependencies": {
