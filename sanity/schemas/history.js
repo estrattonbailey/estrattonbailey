@@ -9,6 +9,11 @@ export default {
       type: 'string'
     },
     {
+      name: 'comment',
+      title: 'Comment',
+      type: 'text'
+    },
+    {
       name: 'url',
       title: 'URL',
       type: 'string',

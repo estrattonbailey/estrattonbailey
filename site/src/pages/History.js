@@ -2,6 +2,7 @@ import { h } from "hyposcript";
 import { Box } from "hypobox";
 import { load } from "presta/load";
 import { head } from "presta/head";
+import md from 'snarkdown';
 
 import { client } from "@/src/lib/sanity";
 import { Gutter } from "@/src/components/Gutter";
@@ -17,9 +18,10 @@ export function Page() {
       client.fetch(`
       *[_type == 'history']{
         title,
+        comment,
         url,
         _createdAt
-      }
+      } | order(_createdAt desc)
     `),
     { key: "history" }
   );
@@ -42,13 +44,20 @@ export function Page() {
 
       <Box as="ul" pt={4} mx="-8px">
         {history.map((i) => (
-          <Box as="li">
-            <Box f aic my={1} mw="m">
-              <Box as="a" p={2} href={i.url} target="_blank">
-                {i.title}
+          <Box as="li" px={2} py={3} mw="m">
+            {i.title && (
+              <Box as="a" mx="-4px" p={1} db href={i.url} target="_blank">
+                ^{i.title}
               </Box>
-              <Box as="span" fs={6} ml={2} mt="3px" c="#ccc">{i._createdAt}</Box>
-            </Box>
+            )}
+
+            {i.comment && (
+              <Box mt={1}>
+                {md(i.comment)}
+              </Box>
+            )}
+
+            <Box db fs={6} mt={2} c="#ccc">{i._createdAt}</Box>
           </Box>
         ))}
       </Box>
