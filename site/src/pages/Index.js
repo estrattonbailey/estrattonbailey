@@ -37,7 +37,7 @@ export function Page() {
 
   return (
     <Gutter withVertical>
-      <Box as="h1" fs={3} mt={3}>
+      <Box as="h1" fs={3} mt={3} bg="blue" c="white" dib>
         {page.pageTitle}
       </Box>
       <Box as="p" mt={2} mb="0" fs={4} mw={[1, 1, "m"]}>
@@ -67,6 +67,12 @@ export function Page() {
             prefix: "^",
             external: true,
           },
+          {
+            title: "spaghetti",
+            url: "https://spaghetti.directory/",
+            prefix: "^",
+            external: true,
+          },
         ].map((l) => (
           <Box
             as="a"
@@ -83,9 +89,36 @@ export function Page() {
         ))}
       </Box>
 
-      <Box as="h2" mt={4} fs={4}>
-        Projects
+      <Box as="h2" mt={4} fs={4}>Projects</Box>
+
+      <Box f aic fw mx="-16px" mw={[1, 1, "m"]}>
+        {[
+          {
+            title: 'Startup Stock Photos',
+            url: 'https://startupstockphotos.com',
+            description: '100+ photos, 600M+ views',
+          },
+          {
+            title: 'RIFF',
+            url: 'https://riff.world',
+            description: 'unmute your world',
+          },
+          {
+            title: 'sure thing',
+            url: 'https://sure-thing.net',
+            description: 'you got it',
+          },
+        ].map((p) => (
+          <Box fs={5} px={3} my={2} mr={3}>
+            <Box as="a" href={p.url} target="_blank" p={2} ml="-8px">
+              {p.title}
+            </Box>
+            <Box fs={6} mt={1}>{p.description}</Box>
+          </Box>
+        ))}
       </Box>
+
+      <Box as="h2" mt={4} fs={4}>OSS</Box>
 
       <Box f aic fw mx="-8px" mw={[1, 1, "m"]}>
         {page.projects.map((p) => (
@@ -93,6 +126,9 @@ export function Page() {
             {p.title}
           </Box>
         ))}
+        <Box as="a" fs={5} p={2} my={2} mr={3} href="https://github.com/estrattonbailey" target="_blank">
+          •••
+        </Box>
       </Box>
     </Gutter>
   );
