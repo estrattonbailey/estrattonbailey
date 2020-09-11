@@ -6,7 +6,6 @@ import { theme } from '@/src/lib/theme'
 configure({ theme })
 
 const name = `estrattonbailey`
-const title = `estrattonbailey`
 const image = `/static/og.png`
 const url = `https://estrattonbailey.com`
 
@@ -18,13 +17,11 @@ export function createDocument ({ body }) {
     },
     head: {
       og: {
-        title,
         site_name: name,
         image,
         url
       },
       twitter: {
-        title,
         site_name: name,
         image,
         card: 'summary_large_image',

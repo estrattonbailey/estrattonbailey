@@ -4,7 +4,7 @@ import { load } from "presta/load";
 import { head } from "presta/head";
 import md from "snarkdown";
 
-import { client } from "@/src/lib/sanity";
+import { client, image } from "@/src/lib/sanity";
 import { Gutter } from "@/src/components/Gutter";
 
 export function getPaths() {
@@ -32,6 +32,7 @@ export function Page() {
   head({
     title: page.title,
     description: page.description,
+    image: image(page.image).width(1200).url(),
   });
 
   return (
