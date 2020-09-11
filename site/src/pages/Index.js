@@ -43,7 +43,7 @@ export function Page() {
       <Box as="p" mt={2} mb="0" fs={4} mw={[1, 1, "m"]}>
         {md(page.pageDescription)}
       </Box>
-      <Box f aic fw mx="-8px">
+      <Box f aic fw mx="-8px" mt={3}>
         {[
           // {
           //   title: "notes",
@@ -77,7 +77,7 @@ export function Page() {
           <Box
             as="a"
             href={l.url}
-            my={3}
+            my={1}
             p={2}
             mr={3}
             fs={5}
@@ -120,13 +120,13 @@ export function Page() {
 
       <Box as="h2" mt={4} fs={4}>OSS</Box>
 
-      <Box f aic fw mx="-8px" mw={[1, 1, "m"]}>
+      <Box f aic fw mx="-8px" mw={[1, 1, "m"]} mt={3}>
         {page.projects.map((p) => (
-          <Box as="a" fs={5} p={2} my={2} mr={3} href={p.url} target="_blank">
+          <Box as="a" fs={5} p={2} my={1} mr={3} href={p.url} target="_blank">
             {p.title}
           </Box>
         ))}
-        <Box as="a" fs={5} p={2} my={2} mr={3} href="https://github.com/estrattonbailey" target="_blank">
+        <Box as="a" fs={5} p={2} my={1} mr={3} href="https://github.com/estrattonbailey" target="_blank">
           •••
         </Box>
       </Box>
