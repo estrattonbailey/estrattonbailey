@@ -1,3 +1,4 @@
 module.exports = {
-  input: './src/pages/**/*.js'
+  pages: 'src/pages/**/*.js',
+  output: 'build'
 }

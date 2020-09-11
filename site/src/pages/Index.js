@@ -44,11 +44,11 @@ export function Page() {
       </Box>
       <Box f aic fw mx="-8px">
         {[
-          {
-            title: "notes",
-            url: "/notes",
-            prefix: "/",
-          },
+          // {
+          //   title: "notes",
+          //   url: "/notes",
+          //   prefix: "/",
+          // },
           {
             title: "history",
             url: "/history",
