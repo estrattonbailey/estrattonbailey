@@ -98,11 +98,11 @@ export function Page() {
             url: 'https://startupstockphotos.com',
             description: '100+ photos, 600M+ views',
           },
-          {
-            title: 'RIFF',
-            url: 'https://riff.world',
-            description: 'unmute your world',
-          },
+          // {
+          //   title: 'RIFF',
+          //   url: 'https://riff.world',
+          //   description: 'unmute your world',
+          // },
           {
             title: 'sure thing',
             url: 'https://sure-thing.net',
