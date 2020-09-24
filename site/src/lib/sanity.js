@@ -4,7 +4,7 @@ import imageURL from '@sanity/image-url'
 export const client = sanityClient({
   projectId: 'gzr25kqy',
   dataset: 'production',
-  useCdn: true
+  useCdn: false
 })
 
 const builder = imageURL(client)

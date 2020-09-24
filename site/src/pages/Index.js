@@ -37,13 +37,13 @@ export function Page() {
 
   return (
     <Gutter withVertical>
-      <Box as="h1" fs={3} mt={3} bg="blue" c="white" dib>
+      <Box as="h1" fs={2} mt={4} c="b" dib>
         {page.pageTitle}
       </Box>
-      <Box as="p" mt={2} mb="0" fs={4} mw={[1, 1, "m"]}>
+      <Box as="p" mt={3} mb="0" fs={4} mw={[1, 1, "m"]}>
         {md(page.pageDescription)}
       </Box>
-      <Box f aic fw mx="-8px" mt={3}>
+      <Box as="ul" f aic fw mx={-3} mt={4}>
         {[
           // {
           //   title: "notes",
@@ -51,83 +51,117 @@ export function Page() {
           //   prefix: "/",
           // },
           {
-            title: "history",
+            title: "/history",
             url: "/history",
-            prefix: "/",
           },
           {
             title: "github",
             url: "https://github.com/estrattonbailey",
-            prefix: "^",
             external: true,
           },
           {
             title: "twitter",
             url: "https://twitter.com/estrattonbailey",
-            prefix: "^",
             external: true,
           },
           {
             title: "spaghetti",
             url: "https://spaghetti.directory/",
-            prefix: "^",
             external: true,
           },
         ].map((l) => (
-          <Box
-            as="a"
-            href={l.url}
-            my={1}
-            p={2}
-            mr={3}
-            fs={5}
-            target={l.external ? "_blank" : ""}
-          >
-            {l.prefix}
-            {l.title}
+          <Box as="li">
+            <Box
+              as="a"
+              db
+              href={l.url}
+              my={2}
+              p={3}
+              mr={4}
+              fs={5}
+              target={l.external ? "_blank" : ""}
+            >
+              {l.title}
+            </Box>
           </Box>
         ))}
       </Box>
 
-      <Box as="h2" mt={4} fs={4}>Projects</Box>
+      <Box as="h2" mt={5} fs={4}>
+        Projects
+      </Box>
 
-      <Box f aic fw mx="-16px" mw={[1, 1, "m"]}>
+      <Box f aic fw mx={-4} mw={[1, 1, "m"]}>
         {[
           {
-            title: 'Startup Stock Photos',
-            url: 'https://startupstockphotos.com',
-            description: '100+ photos, 600M+ views',
+            title: "Startup Stock Photos",
+            url: "https://startupstockphotos.com",
+            description: "100+ photos, 600M+ views",
+            external: true,
           },
-          // {
-          //   title: 'RIFF',
-          //   url: 'https://riff.world',
-          //   description: 'unmute your world',
-          // },
           {
-            title: 'sure thing',
-            url: 'https://sure-thing.net',
-            description: 'you got it',
+            title: "/presta",
+            url: "/projects/presta",
+            description: "build the modern web",
+          },
+          {
+            title: "sure thing",
+            url: "https://sure-thing.net",
+            description: "you got it",
+            external: true,
           },
         ].map((p) => (
-          <Box fs={5} px={3} my={2} mr={3}>
-            <Box as="a" href={p.url} target="_blank" p={2} ml="-8px">
-              {p.title}
+          <Box as="ul" fs={5} px={4} my={3} mr={4}>
+            <Box as="li">
+              <Box
+                as="a"
+                db
+                href={p.url}
+                p={3}
+                ml="-8px"
+                target={p.external ? "_blank" : ""}
+              >
+                {p.title}
+              </Box>
+              <Box fs={6}>{p.description}</Box>
             </Box>
-            <Box fs={6} mt={1}>{p.description}</Box>
           </Box>
         ))}
       </Box>
 
-      <Box as="h2" mt={4} fs={4}>OSS</Box>
+      <Box as="h2" mt={5} fs={4}>
+        OSS
+      </Box>
 
-      <Box f aic fw mx="-8px" mw={[1, 1, "m"]} mt={3}>
+      <Box as="ul" f aic fw mx={-3} mw={[1, 1, "m"]} mt={4}>
         {page.projects.map((p) => (
-          <Box as="a" fs={5} p={2} my={1} mr={3} href={p.url} target="_blank">
-            {p.title}
+          <Box as="li" db>
+            <Box
+              as="a"
+              db
+              fs={5}
+              p={3}
+              my={2}
+              mr={4}
+              href={p.url}
+              target="_blank"
+            >
+              {p.title}
+            </Box>
           </Box>
         ))}
-        <Box as="a" fs={5} p={2} my={1} mr={3} href="https://github.com/estrattonbailey" target="_blank">
-          •••
+        <Box as="li">
+          <Box
+            as="a"
+            fs={5}
+            p={3}
+            my={2}
+            mr={4}
+            href="https://github.com/estrattonbailey"
+            target="_blank"
+          >
+            •••
+          </Box>
         </Box>
       </Box>
     </Gutter>

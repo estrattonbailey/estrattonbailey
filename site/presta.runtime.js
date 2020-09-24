@@ -1,4 +1,4 @@
-import { configure, getCss } from 'hypobox'
+import { theme as defaultTheme, configure, getCss } from 'hypobox'
 import { document } from 'presta/document'
 
 import { theme } from '@/src/lib/theme'
@@ -36,7 +36,7 @@ export function createDocument ({ body }) {
         `<link rel="stylesheet" href="https://unpkg.com/svbstrate@4.1.1/src/lib/buttons.css" />`,
         `<link rel="stylesheet" href="https://unpkg.com/svbstrate@4.1.1/src/lib/forms.css" />`,
         `<link rel="stylesheet" href="https://unpkg.com/svbstrate@4.1.1/src/lib/lists.css" />`,
-        `<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" />`
+        `<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700" rel="stylesheet" />`
       ],
       style: [
         `<style id="style">${getCss()}</style>`,
@@ -45,32 +45,73 @@ export function createDocument ({ body }) {
             font-family: 'Roboto Mono', monospace;
           }
           html, body {
-            color: #333;
+            color: ${theme.color.d};
+            font-weight: 400;
           }
           ::selection {
-            background: blue;
+            background: ${theme.color.b};
             color: white;
           }
           a {
-            color: blue;
+            color: ${theme.color.b};
           }
           a:visited {
-            color: blue;
+            color: ${theme.color.b};
           }
           a:focus {
-            outline: 2px dashed blue;
+            outline: 2px dashed ${theme.color.t};
+          }
+          h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+          }
+          p {
+            line-height: 1.5;
+            margin: 0;
+          }
+          ${defaultTheme.fontSize.slice(1).map((fs, i) => `h${i + 1} { font-size: ${fs} }`).join('')}
+          .wysiwyg p {
+            margin-bottom: ${defaultTheme.space[4]}px;
+          }
+          .wysiwyg ul {
+            margin: ${defaultTheme.space[4]}px 0;
+            list-style: disc outside;
+            padding-left: ${defaultTheme.space[4]}px;
+          }
+          .wysiwyg h1,
+          .wysiwyg h2,
+          .wysiwyg h3,
+          .wysiwyg h4,
+          .wysiwyg h5,
+          .wysiwyg h6 {
+            margin: 1em 0 0.75em;
           }
           pre, code {
             font-size: 0.9rem;
             background: whitesmoke;
           }
-          pre {
-            background: whitesmoke;
-            padding: 16px;
-            overflow: auto;
+          pre code {
+            background: transparent;
           }
-          p {
-            line-height: 1.5;
+          pre {
+            margin: ${defaultTheme.space[4]}px 0;
+            padding: ${defaultTheme.space[5]}px;
+            overflow: auto;
+            border-radius: 6px;
+          }
+          pre code::selection,
+          pre::selection {
+            background: ${theme.color.d};
+            color: white;
+          }
+          .project a,
+          .project a:visited {
+            color: ${theme.color.b};
+          }
+          .project pre,
+          .project code {
+            background: ${theme.color.t};
+          }
+          @media screen and (min-width: ${defaultTheme.breakpoints[1]}) {
           }
         </style>`
       ],

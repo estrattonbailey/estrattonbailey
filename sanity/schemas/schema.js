@@ -5,6 +5,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import root from './root'
 import note from './note'
 import history from './history'
+import project from './project'
 
 export default createSchema({
   name: 'default',
@@ -12,5 +13,6 @@ export default createSchema({
     root,
     note,
     history,
+    project,
   ])
 })

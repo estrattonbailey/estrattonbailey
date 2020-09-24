@@ -39,10 +39,10 @@ export function Page() {
         ]}
       />
 
-      <Box as="ul" pt={4} mx="-8px">
+      <Box as="ul" pt={5} mx={-3}>
         {notes.map((n) => (
           <Box as="li">
-            <Box as="a" db my={2} p={2} fs={3} mw="m" href={`/notes/${n.slug}`}>
+            <Box as="a" db my={3} p={3} fs={3} mw="m" href={`/notes/${n.slug}`}>
               {n.title}
             </Box>
           </Box>

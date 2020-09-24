@@ -42,22 +42,22 @@ export function Page() {
         ]}
       />
 
-      <Box as="ul" pt={4} mx="-8px">
+      <Box as="ul" pt={5} mx={-3}>
         {history.map((i) => (
-          <Box as="li" px={2} py={3} mw="m">
+          <Box as="li" px={3} py={4} mw="m">
             {i.title && (
-              <Box as="a" mx="-4px" p={1} db href={i.url} target="_blank">
+              <Box as="a" mx="-4px" p={2} db href={i.url} target="_blank">
                 ^{i.title}
               </Box>
             )}
 
             {i.comment && (
-              <Box mt={1}>
+              <Box mt={2}>
                 {md(i.comment)}
               </Box>
             )}
 
-            <Box db fs={6} mt={2} c="#ccc">{i._createdAt}</Box>
+            <Box db fs={6} mt={3} c="#ccc">{i._createdAt}</Box>
           </Box>
         ))}
       </Box>

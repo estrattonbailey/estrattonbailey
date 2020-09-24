@@ -1,4 +1,2 @@
-module.exports = {
-  pages: 'src/pages/**/*.js',
-  output: 'build'
-}
+export const pages = 'src/pages/**/*.js'
+export const output = 'build'

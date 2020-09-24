@@ -61,11 +61,11 @@ export function Page({ pathname }) {
         ]}
       />
 
-      <Box as="h1" pt={4}>
+      <Box as="h1" pt={7}>
         {note.title}
       </Box>
 
-      <Box mw="m">
+      <Box mw="m" mt={5} className="wysiwyg">
         {md(note.body)}
       </Box>
     </Gutter>
