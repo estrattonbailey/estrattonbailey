@@ -1,6 +1,5 @@
 import { h } from "hyposcript";
 import { Box } from "hypobox";
-import { head } from "presta/head";
 import { load } from "presta/load";
 import md from 'marked'
 
@@ -15,7 +14,7 @@ export function getPaths() {
   return ["/projects/presta"];
 }
 
-export function Page() {
+export function Page({ head }) {
   const page = load(
     () =>
       client.fetch(`

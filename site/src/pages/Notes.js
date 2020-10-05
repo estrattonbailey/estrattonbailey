@@ -1,7 +1,6 @@
 import { h } from "hyposcript";
 import { Box } from "hypobox";
 import { load } from "presta/load";
-import { head } from "presta/head";
 
 import { client } from "@/src/lib/sanity";
 import { Gutter } from "@/src/components/Gutter";
@@ -11,7 +10,7 @@ export function getPaths() {
   return ["/notes"];
 }
 
-export function Page() {
+export function Page({ head }) {
   const notes = load(
     () =>
       client.fetch(`

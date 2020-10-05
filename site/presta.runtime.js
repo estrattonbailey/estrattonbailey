@@ -9,9 +9,9 @@ const name = `estrattonbailey`
 const image = `/static/og.png`
 const url = `https://estrattonbailey.com`
 
-export function createDocument ({ body }) {
-  return document({
-    body: `<div id="root">${body}</div>`,
+export function createDocument (ctx) {
+  return document(ctx, {
+    body: `<div id="root">${ctx.body}</div>`,
     foot: {
       script: [{ src: '/client.js' }]
     },

@@ -1,7 +1,6 @@
 import { h } from "hyposcript";
 import { Box } from "hypobox";
 import { load } from "presta/load";
-import { head } from "presta/head";
 import md from 'snarkdown';
 
 import { client } from "@/src/lib/sanity";
@@ -12,7 +11,7 @@ export function getPaths() {
   return ["/history"];
 }
 
-export function Page() {
+export function Page({ head }) {
   const history = load(
     () =>
       client.fetch(`

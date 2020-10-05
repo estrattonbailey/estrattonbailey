@@ -1,7 +1,6 @@
 import { h } from "hyposcript";
 import { Box } from "hypobox";
 import { load, cache } from "presta/load";
-import { head } from "presta/head";
 import md from "marked";
 
 import { client } from "@/src/lib/sanity";
@@ -23,7 +22,7 @@ export async function getPaths() {
   return notes.map((n) => `/notes/${n.slug}`);
 }
 
-export function Page({ pathname }) {
+export function Page({ pathname, head }) {
   const [_, slug] = pathname.match(/notes\/(.+)$/) || [];
 
   const note = load(
