@@ -36,13 +36,14 @@ export function Page({ head }) {
 
   return (
     <Gutter withVertical>
-      <Box as="h1" fs={2} mt={4} c="b" dib>
+      <Box as="h1" fs={2} mt={6} c="white" bg="blue" dib>
         {page.pageTitle}
       </Box>
-      <Box as="p" mt={3} mb="0" fs={4} mw={[1, 1, "m"]}>
+      <Box as="p" mt={5} mb="0" fs={4} mw={[1, 1, "m"]}>
         {md(page.pageDescription)}
       </Box>
-      <Box as="ul" f aic fw mx={-3} mt={4}>
+
+      <Box as="ul" f aic fw mx={-6} mt={6}>
         {[
           // {
           //   title: "notes",
@@ -69,14 +70,11 @@ export function Page({ head }) {
             external: true,
           },
         ].map((l) => (
-          <Box as="li">
+          <Box as="li" px={6} my={3}>
             <Box
               as="a"
               db
               href={l.url}
-              my={2}
-              p={3}
-              mr={4}
               fs={5}
               target={l.external ? "_blank" : ""}
             >
@@ -86,11 +84,11 @@ export function Page({ head }) {
         ))}
       </Box>
 
-      <Box as="h2" mt={5} fs={4}>
+      <Box as="h2" mt={12} mb={4} fs={4}>
         Projects
       </Box>
 
-      <Box f aic fw mx={-4} mw={[1, 1, "m"]}>
+      <Box as="ul" f aic fw mx={-6} mw={[1, 1, "m"]}>
         {[
           {
             title: "Startup Stock Photos",
@@ -99,9 +97,10 @@ export function Page({ head }) {
             external: true,
           },
           {
-            title: "/presta",
-            url: "/projects/presta",
+            title: "Presta",
+            url: "https://sure-thing.net/presta",
             description: "build the modern web",
+            external: true,
           },
           {
             title: "sure thing",
@@ -110,38 +109,33 @@ export function Page({ head }) {
             external: true,
           },
         ].map((p) => (
-          <Box as="ul" fs={5} px={4} my={3} mr={4}>
-            <Box as="li">
-              <Box
-                as="a"
-                db
-                href={p.url}
-                p={3}
-                ml="-8px"
-                target={p.external ? "_blank" : ""}
-              >
-                {p.title}
-              </Box>
-              <Box fs={6}>{p.description}</Box>
-            </Box>
-          </Box>
-        ))}
-      </Box>
-
-      <Box as="h2" mt={5} fs={4}>
-        OSS
-      </Box>
-
-      <Box as="ul" f aic fw mx={-3} mw={[1, 1, "m"]} mt={4}>
-        {page.projects.map((p) => (
-          <Box as="li" db>
+          <Box as="li" px={6} my={3}>
             <Box
               as="a"
               db
               fs={5}
-              p={3}
-              my={2}
-              mr={4}
+              mb={3}
+              href={p.url}
+              target={p.external ? "_blank" : ""}
+            >
+              {p.title}
+            </Box>
+            <Box fs={6}>{p.description}</Box>
+          </Box>
+        ))}
+      </Box>
+
+      <Box as="h2" mt={10} fs={4}>
+        OSS
+      </Box>
+
+      <Box as="ul" f aic fw mx={-6} mw={[1, 1, "m"]} mt={4}>
+        {page.projects.map((p) => (
+          <Box as="li" db px={6} my={3}>
+            <Box
+              as="a"
+              db
+              fs={5}
               href={p.url}
               target="_blank"
             >
@@ -149,13 +143,11 @@ export function Page({ head }) {
             </Box>
           </Box>
         ))}
-        <Box as="li">
+
+        <Box as="li" db px={6} my={3}>
           <Box
             as="a"
             fs={5}
-            p={3}
-            my={2}
-            mr={4}
             href="https://github.com/estrattonbailey"
             target="_blank"
           >

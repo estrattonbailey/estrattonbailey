@@ -3,7 +3,7 @@ import { Box } from 'hypobox'
 
 export function Gutter({ withVertical, children }) {
   return (
-    <Box px={[5, 5, 6]} py={withVertical ? [5, 5, 6] : 0}>
+    <Box px={[8, 8, 12]} py={withVertical ? [8, 8, 12] : 0}>
       {children}
     </Box>
   )
