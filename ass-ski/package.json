@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "ass-ski",
+  "scripts": {
+    "build": "esbuild ass-ski.css ass-ski.tsx --bundle --outdir=../public"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "esbuild": "^0.12.26",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "hyposcript": "^1.0.4",
+    "hypostyle": "^3.1.2",
+    "preact": "^10.5.14",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "superfine": "^8.2.0"
+  }
+}

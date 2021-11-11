@@ -1,0 +1,52 @@
+.matrix {
+  flex-direction: column;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-color: var(--light);
+}
+.matrix__row {
+  border-bottom: 1px solid;
+  border-color: var(--light);
+}
+.matrix__cell {
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  border-right: 1px solid;
+  border-color: var(--light);
+  z-index: 0;
+  text-shadow: 0 0 0 var(--dark);
+  color: transparent;
+  cursor: pointer;
+  line-height: 1.1;
+}
+.matrix__cell:-webkit-autofill {
+  -webkit-text-fill-color: var(--dark);
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+.matrix__cell:hover {
+  outline: 3px solid var(--light);
+  z-index: 1;
+}
+.matrix__cell:focus {
+  outline: 3px solid var(--gray);
+  z-index: 1;
+}
+
+.frame {
+  flex-direction: column;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-color: var(--light);
+}
+.frame__row {
+  border-bottom: 1px solid;
+  border-color: var(--light);
+}
+.frame__cell {
+  width: 1em;
+  height: 1em;
+  border-right: 1px solid;
+  border-color: var(--light);
+  line-height: 1.1;
+}

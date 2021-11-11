@@ -1,0 +1,101 @@
+:root {
+  --dark: #23283d;
+  --gray: #a8b0d3;
+  --light: #e9ecf8;
+}
+html,
+body {
+  font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+  color: var(--dark);
+}
+
+.dark {
+  color: var(--dark);
+}
+.gray {
+  color: var(--gray);
+}
+.light {
+  color: var(--light);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.bg-gray {
+  background-color: var(--gray);
+}
+.bg-light {
+  background-color: var(--light);
+}
+
+.link {
+}
+.link:focus,
+.link:hover {
+  outline: 0;
+  text-decoration: underline;
+  color: var(--gray);
+}
+.fake-link {
+  text-decoration: underline;
+}
+
+p, a {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin: 1em 0 0.5em;
+}
+.markdown h1:first-child,
+.markdown h2:first-child,
+.markdown h3:first-child,
+.markdown h4:first-child,
+.markdown h5:first-child,
+.markdown h6:first-child {
+  margin-top: 0;
+}
+.markdown h1:last-child,
+.markdown h2:last-child,
+.markdown h3:last-child,
+.markdown h4:last-child,
+.markdown h5:last-child,
+.markdown h6:last-child {
+  margin-bottom: 0;
+}
+.markdown p {
+  margin: 1em 0;
+}
+.markdown h6 {
+  color: var(--gray);
+}
+
+.history {
+}
+@media (min-width: 900px) {
+  .history {
+    max-width: 360px;
+    margin-top: 0;
+  }
+}
+.history__title a {
+  text-decoration: none;
+}
+.history a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.history a:focus,
+.history a:hover {
+  outline: 0;
+  color: var(--dark);
+}
