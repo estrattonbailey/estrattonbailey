@@ -2,10 +2,10 @@
   "private": true,
   "name": "estrattonbailey",
   "scripts": {
-    "start": "pnpx presta dev",
-    "build": "pnpx presta",
-    "serve": "pnpx presta serve",
-    "format": "pnpx prettier --write ."
+    "start": "presta dev",
+    "build": "presta",
+    "serve": "presta serve",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@presta/html": "^0.1.4",
