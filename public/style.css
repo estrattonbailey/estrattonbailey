@@ -5,7 +5,7 @@
 }
 html,
 body {
-  font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
   color: var(--dark);
 }
 
@@ -40,7 +40,8 @@ body {
   text-decoration: underline;
 }
 
-p, a {
+p,
+a {
   font-size: inherit;
   line-height: inherit;
 }

@@ -12,9 +12,7 @@ export async function handler(ev) {
     html: html({
       head: createHeadObject({
         title: "assy",
-        link: [
-          { href: '/ass-ski.css', rel: 'stylesheet' },
-        ]
+        link: [{ href: "/ass-ski.css", rel: "stylesheet" }],
       }),
       body: <div id="root"></div>,
       foot: {
