@@ -7,7 +7,7 @@
 
   history.innerHTML = "";
 
-  contents.map((item) => {
+  contents.reverse().map((item) => {
     const { generated_title, source } = item;
     const { url } = source;
     history.innerHTML += `<a href="${url}" target="_blank">${
