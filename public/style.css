@@ -3,6 +3,11 @@
   --gray: #a8b0d3;
   --light: #e9ecf8;
 }
+
+::selection {
+  background-color: var(--light);
+}
+
 html,
 body {
   font-family: "Inter", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
