@@ -3,6 +3,7 @@ import { h } from "hyposcript";
 import { html } from "@presta/html";
 import { source } from '@presta/source-filesystem'
 import { micromark as md } from "micromark";
+import fm from 'front-matter'
 
 import { createHeadObject } from "@/util/createHeadObject";
 
@@ -20,12 +21,16 @@ export async function getStaticPaths() {
 }
 
 export async function handler(ev) {
-  const note = routes[ev.path.split('?')[0]]
-  const markup = md(note);
+  const note = fm(routes[ev.path.split('?')[0]])
+  const markup = md(note.body);
 
   return {
     html: html({
-      head: createHeadObject(),
+      head: {
+        ...createHeadObject(),
+        title: note.attributes.title,
+        description: note.attributes.description,
+      },
       body: (
         <div className="p12 markdown">
           <a href='/' className='pb12 caps h6'>

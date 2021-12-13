@@ -10,6 +10,7 @@
   "dependencies": {
     "@presta/html": "^0.1.4",
     "@presta/source-filesystem": "^0.2.3",
+    "front-matter": "^4.0.2",
     "hyposcript": "^1.0.4",
     "micromark": "^3.0.5"
   },
