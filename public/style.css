@@ -81,6 +81,12 @@ a {
 .markdown h6 {
   color: var(--gray);
 }
+.markdown pre {
+  font-size: 15px;
+  background: var(--light);
+  padding: 16px;
+  border-radius: 4px;
+}
 
 .history {
 }
