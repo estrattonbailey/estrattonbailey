@@ -86,6 +86,7 @@ a {
   background: var(--light);
   padding: 16px;
   border-radius: 4px;
+  overflow: auto;
 }
 
 .history {
@@ -110,4 +111,13 @@ a {
 .history a:hover {
   outline: 0;
   color: var(--dark);
+}
+
+.outer {
+  padding: 24px;
+}
+@media (min-width: 900px) {
+  .outer {
+    padding: 48px;
+  }
 }

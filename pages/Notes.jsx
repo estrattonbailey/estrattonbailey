@@ -32,7 +32,7 @@ export async function handler(ev) {
         description: note.attributes.description,
       },
       body: (
-        <div className="p12 markdown">
+        <div className="outer markdown">
           <a href='/' className='pb12 caps h6'>
             <strong>
               &lt; Back
