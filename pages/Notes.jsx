@@ -28,7 +28,7 @@ export async function handler(ev) {
     html: html({
       head: {
         ...createHeadObject(),
-        title: note.attributes.title,
+        title: note.attributes.title + ' | estrattonbailey',
         description: note.attributes.description,
       },
       body: (
