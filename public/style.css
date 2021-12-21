@@ -45,6 +45,9 @@ body {
   text-decoration: underline;
 }
 
+a {
+  display: inline;
+}
 p,
 a {
   font-size: inherit;
@@ -87,6 +90,12 @@ a {
   padding: 16px;
   border-radius: 4px;
   overflow: auto;
+}
+.markdown blockquote {
+  border-left: 4px solid var(--light);
+  margin: 0;
+  padding-left: 24px;
+  font-style: italic;
 }
 
 .history {

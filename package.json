@@ -10,13 +10,13 @@
   "dependencies": {
     "@presta/html": "^0.1.4",
     "@presta/source-filesystem": "^0.2.3",
-    "front-matter": "^4.0.2",
-    "hyposcript": "^1.0.4",
-    "micromark": "^3.0.5"
+    "hyposcript": "^1.0.4"
   },
   "devDependencies": {
     "@presta/adapter-netlify": "^0.2.3",
     "esbuild": "^0.13.13",
+    "front-matter": "^4.0.2",
+    "micromark": "^3.0.10",
     "presta": "^0.42.0",
     "prettier": "^2.4.0"
   }

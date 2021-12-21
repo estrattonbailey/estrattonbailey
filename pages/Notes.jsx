@@ -33,7 +33,7 @@ export async function handler(ev) {
       },
       body: (
         <div className="outer markdown">
-          <a href='/' className='pb12 caps h6'>
+          <a href='/' className='pb12 caps h6 db'>
             <strong>
               &lt; Back
             </strong>
