@@ -97,6 +97,9 @@ a {
   padding-left: 24px;
   font-style: italic;
 }
+img {
+  width: 100%;
+}
 
 .history {
 }
