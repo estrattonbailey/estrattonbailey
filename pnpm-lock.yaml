@@ -8,7 +8,7 @@ specifiers:
   front-matter: ^4.0.2
   hyposcript: ^1.1.3
   micromark: ^3.0.10
-  presta: ^0.43.0
+  presta: ^0.43.2
   prettier: ^2.5.1
 
 dependencies:
@@ -21,7 +21,7 @@ devDependencies:
   esbuild: 0.13.15
   front-matter: 4.0.2
   micromark: 3.0.10
-  presta: 0.43.0
+  presta: 0.43.2
   prettier: 2.5.1
 
 packages:
@@ -34,7 +34,7 @@ packages:
     dependencies:
       fs-extra: 10.0.0
       netlify-redirect-parser: 8.2.0
-      presta: 0.43.0
+      presta: 0.43.2
       toml: 3.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -53,7 +53,7 @@ packages:
     dependencies:
       filewatcher: 3.0.1
       pirates: 4.0.4
-      presta: 0.43.0
+      presta: 0.43.2
       tiny-glob: 0.2.9
     transitivePeerDependencies:
       - bufferutil
@@ -718,8 +718,8 @@ packages:
     engines: {node: '>= 6'}
     dev: false
 
-  /presta/0.43.0:
-    resolution: {integrity: sha512-HrYNk1vHsLYF+qMC7frkziTpKBF7dYrHLafzXZnxLg9RBLsLd4zOq1Z9MxqErA5Y/awRjj3b7w5UKb48rpxoEg==}
+  /presta/0.43.2:
+    resolution: {integrity: sha512-UcGi5WYwTY2pZ7xQ07Y390mhaVz99k0quYLU0AIPSFGbbE8kh1iK3zOhDJwqUqhaaipx9SGBn4gnNJgnJ5Py4Q==}
     hasBin: true
     dependencies:
       chokidar: 3.5.2

@@ -1,6 +1,6 @@
 ---
 title: A Better Computer
-description: "Thoughts on \"On Furniture\" by @spencermountain"
+description: Thoughts on "On Furniture" by @spencermountain
 ---
 
 # A better computer

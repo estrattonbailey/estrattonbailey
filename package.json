@@ -17,7 +17,7 @@
     "esbuild": "^0.13.15",
     "front-matter": "^4.0.2",
     "micromark": "^3.0.10",
-    "presta": "^0.43.0",
+    "presta": "^0.43.2",
     "prettier": "^2.5.1"
   }
 }
