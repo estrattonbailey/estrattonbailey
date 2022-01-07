@@ -17,7 +17,6 @@ export async function handler() {
 
             <a
               href="/"
-              target="_blank"
               className="link db"
             >
               Home
