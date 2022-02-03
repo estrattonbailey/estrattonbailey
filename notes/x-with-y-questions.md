@@ -1,6 +1,7 @@
 ---
 title: X With Y Questions, Or Everything Old Is New Again
 description: How do I do X with Y?
+date: "2021-12-31"
 ---
 
 # How do I do X with Y?

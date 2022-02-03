@@ -32,11 +32,23 @@ export async function handler(ev) {
             >
               Twitter
             </a>
+            <a
+              href="/notes"
+              className="link db"
+            >
+              Notes
+            </a>
 
             <h1 className="fs4 mb6 mt10">Projects</h1>
 
             <a href="https://presta.run" target="_blank" className="link db">
               Presta
+            </a>
+            <a href="https://grdn.site" target="_blank" className="link db">
+              grdn
+            </a>
+            <a href="https://tweeet.link" target="_blank" className="link db">
+              tweeet.link
             </a>
             <a
               href="https://github.com/sure-thing"

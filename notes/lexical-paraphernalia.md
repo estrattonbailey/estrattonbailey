@@ -1,6 +1,7 @@
 ---
 title: "Lexical Paraphernalia"
 description: "Lexical paraphernalia. Mostly links."
+date: "2021-12-26"
 ---
 
 # Lexical paraphernalia

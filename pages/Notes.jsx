@@ -2,34 +2,45 @@ import path from "path";
 import { h } from "hyposcript";
 import { html } from "@presta/html";
 import { source } from '@presta/source-filesystem'
-import { micromark as md } from "micromark";
 import fm from 'front-matter'
 
 import { createHeadObject } from "@/util/createHeadObject";
 
-const notes = source('../notes/*.md', __filename)
-const routes = notes.reduce((routes, note) => {
+const raw = source('../notes/*.md', __filename)
+const routes = raw.reduce((routes, note) => {
   const filename = path.basename(note[0], '.md')
   return {
     ...routes,
     [`/notes/${filename}`]: note[1],
   }
 }, {})
+const notes = Object
+  .keys(routes)
+  .map(url => [url, fm(routes[url])])
+  .map(([route, note]) => {
+    if (!note.attributes.date) {
+      throw new Error(`note didn't have a date`)
+    }
+
+    return {
+      route,
+      date: new Date(note.attributes.date),
+      ...note,
+    }
+  })
+  .sort((a, b) => b.date - a.date)
 
 export async function getStaticPaths() {
-  return Object.keys(routes)
+  return ['/notes']
 }
 
 export async function handler(ev) {
-  const note = fm(routes[ev.path.split('?')[0]])
-  const markup = md(note.body);
-
   return {
     html: html({
       head: {
         ...createHeadObject(),
-        title: note.attributes.title + ' | estrattonbailey',
-        description: note.attributes.description,
+        title: 'notes | estrattonbailey',
+        description: 'smooth brain',
       },
       body: (
         <div className="outer markdown">
@@ -38,7 +49,15 @@ export async function handler(ev) {
               &lt; Back
             </strong>
           </a>
-          <div style={{ maxWidth: "600px" }}>{markup}</div>
+          <ul style={{ maxWidth: "600px", listStyle: 'none', padding: 0, margin: 0 }}>
+            {notes.map(note => {
+              return (
+                <li>
+                  <a href={note.route}>{note.attributes.title}</a>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       ),
     }),

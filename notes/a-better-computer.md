@@ -1,6 +1,7 @@
 ---
 title: A Better Computer
 description: Thoughts on "On Furniture" by @spencermountain
+date: "2022-01-06"
 ---
 
 # A better computer
