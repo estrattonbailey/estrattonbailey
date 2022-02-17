@@ -53,6 +53,4 @@ better phrase is **all code should be easily replaceable.**
 
 Hot take. Another way to summarize this post might be "don't write
 object-oriented code". Tbh though I'd just be curious to see an OO codebase that
-doesn't suffer from blurry domain edges and unecessarily interrelated code. But
-then, if you're writing code like that, why not just write more functions and
-avoid the footgun in the first place?
+doesn't suffer from blurry domain edges and unecessarily interrelated code. Not sure I've encountered one yet.
