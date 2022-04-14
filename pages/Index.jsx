@@ -41,7 +41,7 @@ export async function handler(ev) {
 
             <h1 className="fs4 mb6 mt10">Projects</h1>
 
-            <a href="https://presta.run" target="_blank" className="link db">
+            <a href="https://github.com/front-of-house/presta" target="_blank" className="link db">
               Presta
             </a>
             <a href="https://grdn.site" target="_blank" className="link db">
@@ -51,11 +51,11 @@ export async function handler(ev) {
               tweeet.link
             </a>
             <a
-              href="https://github.com/sure-thing"
+              href="https://github.com/front-of-house"
               target="_blank"
               className="link db"
             >
-              Sure Thing
+              Front of House
             </a>
             <p className="db">Picostack (soon)</p>
           </div>
