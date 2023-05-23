@@ -12,11 +12,10 @@ export async function handler(ev) {
     html: html({
       head: createHeadObject(),
       body: (
-        <div className="p12 f jcb fw">
-          <div className="pr10">
+        <div className="outer f jcb fw">
+          <div className="left-col">
             <h1 className="fs4 mb6">Eric Bailey</h1>
-            <p>internet person, books, etymology-curious, barfly</p>
-            <p className="mb6">Tell me if I ever did a thing.</p>
+            <p className="mb6">internet person, books, etymology-curious, barfly<br/><em>Tell me if I ever did a thing</em></p>
 
             <a
               href="https://github.com/estrattonbailey"
@@ -48,50 +47,50 @@ export async function handler(ev) {
 
             <h1 className="fs4 mb6 mt10">Projects</h1>
 
-            <p className='f'>
-              <a href="https://sideby.space/" target="_blank" className="link db">
+            <p>
+              <a href="https://sideby.space/" target="_blank" className="link">
                 Side By Side
               </a>
               &nbsp;— IRL coworking space in Chicago
             </p>
 
-            <p className='f'>
-              <a href="https://hypercast.dev/" target="_blank" className="link db">
+            <p>
+              <a href="https://hypercast.dev/" target="_blank" className="link">
                 Hypercast
               </a>
               &nbsp;— real-time data transport
             </p>
 
-            <p className='f'>
-              <a href="https://front-of-house.gitbook.io/svbstrate/" target="_blank" className="link db">
+            <p>
+              <a href="https://front-of-house.gitbook.io/svbstrate/" target="_blank" className="link">
                 Svbstrate
               </a>
               &nbsp;— WIP,&nbsp;<a href='https://github.com/front-of-house/hypobox' target='_blank' className='link'>hypobox</a>&nbsp;for React and RN
             </p>
 
-            <p className='f'>
-              <a href="https://github.com/front-of-house/presta" target="_blank" className="link db">
+            <p>
+              <a href="https://github.com/front-of-house/presta" target="_blank" className="link">
                 Presta
               </a>
               &nbsp;— minimalist web framework
             </p>
 
-            <p className='f'>
-              <a href="https://grdn.site" target="_blank" className="link db">
+            <p>
+              <a href="https://grdn.site" target="_blank" className="link">
                 grdn
               </a>
               &nbsp;— decentralized blog
             </p>
 
-            <p className='f'>
-              <a href="https://tweeet.link" target="_blank" className="link db">
+            <p>
+              <a href="https://tweeet.link" target="_blank" className="link">
                 tweeet.link
               </a>
               &nbsp;— &nbsp;<s>Elon</s>&nbsp;broke it, haven't fixed
             </p>
 
-            <p className='f'>
-              <a href="https://github.com/front-of-house" target="_blank" className="link db">
+            <p>
+              <a href="https://github.com/front-of-house" target="_blank" className="link">
                 Front of House
               </a>
               &nbsp;— everything else

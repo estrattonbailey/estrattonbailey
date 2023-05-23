@@ -132,4 +132,7 @@ img {
   .outer {
     padding: 48px;
   }
+  .left-col {
+    padding-right: 40px;
+  }
 }
