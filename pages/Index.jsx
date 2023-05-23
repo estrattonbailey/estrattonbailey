@@ -26,6 +26,13 @@ export async function handler(ev) {
               GitHub
             </a>
             <a
+              href="https://bsky.app/profile/estrattonbailey.bsky.social"
+              target="_blank"
+              className="link db"
+            >
+              Bluesky
+            </a>
+            <a
               href="https://twitter.com/estrattonbailey"
               target="_blank"
               className="link db"
@@ -41,23 +48,54 @@ export async function handler(ev) {
 
             <h1 className="fs4 mb6 mt10">Projects</h1>
 
-            <a href="https://github.com/front-of-house/presta" target="_blank" className="link db">
-              Presta
-            </a>
-            <a href="https://grdn.site" target="_blank" className="link db">
-              grdn
-            </a>
-            <a href="https://tweeet.link" target="_blank" className="link db">
-              tweeet.link
-            </a>
-            <a
-              href="https://github.com/front-of-house"
-              target="_blank"
-              className="link db"
-            >
-              Front of House
-            </a>
-            <p className="db">Picostack (soon)</p>
+            <p className='f'>
+              <a href="https://sideby.space/" target="_blank" className="link db">
+                Side By Side
+              </a>
+              &nbsp;— IRL coworking space in Chicago
+            </p>
+
+            <p className='f'>
+              <a href="https://hypercast.dev/" target="_blank" className="link db">
+                Hypercast
+              </a>
+              &nbsp;— real-time data transport
+            </p>
+
+            <p className='f'>
+              <a href="https://front-of-house.gitbook.io/svbstrate/" target="_blank" className="link db">
+                Svbstrate
+              </a>
+              &nbsp;— WIP,&nbsp;<a href='https://github.com/front-of-house/hypobox' target='_blank' className='link'>hypobox</a>&nbsp;for React and RN
+            </p>
+
+            <p className='f'>
+              <a href="https://github.com/front-of-house/presta" target="_blank" className="link db">
+                Presta
+              </a>
+              &nbsp;— minimalist web framework
+            </p>
+
+            <p className='f'>
+              <a href="https://grdn.site" target="_blank" className="link db">
+                grdn
+              </a>
+              &nbsp;— decentralized blog
+            </p>
+
+            <p className='f'>
+              <a href="https://tweeet.link" target="_blank" className="link db">
+                tweeet.link
+              </a>
+              &nbsp;— &nbsp;<s>Elon</s>&nbsp;broke it, haven't fixed
+            </p>
+
+            <p className='f'>
+              <a href="https://github.com/front-of-house" target="_blank" className="link db">
+                Front of House
+              </a>
+              &nbsp;— everything else
+            </p>
           </div>
 
           <div className="history mt10 w gray">
