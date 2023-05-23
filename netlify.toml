@@ -2,3 +2,6 @@
   command = "pnpm build"
   publish = "build/static"
   functions = "build/functions"
+
+[functions]
+  node_bundler = 'esbuild'
