@@ -6,14 +6,22 @@ import fm from 'front-matter'
 
 import { createHeadObject } from "@/util/createHeadObject";
 
+const hidden = [
+  'bluesky-cover-letter',
+]
+
 const raw = source('../notes/*.md', __filename)
-const routes = raw.reduce((routes, note) => {
-  const filename = path.basename(note[0], '.md')
-  return {
-    ...routes,
-    [`/notes/${filename}`]: note[1],
-  }
-}, {})
+const routes = raw
+  .filter(filename =>
+    !hidden.includes(path.basename(filename[0], '.md'))
+  )
+  .reduce((routes, note) => {
+    const filename = path.basename(note[0], '.md')
+    return {
+      ...routes,
+      [`/notes/${filename}`]: note[1],
+    }
+  }, {})
 const notes = Object
   .keys(routes)
   .map(url => [url, fm(routes[url])])
