@@ -79,7 +79,7 @@ export async function handler(ev) {
               <a href="https://grdn.site" target="_blank" className="link">
                 grdn
               </a>
-              &nbsp;— decentralized blog
+              &nbsp;— self-hostable microblogging with GitHub & Cloudflare
             </p>
 
             <p>
