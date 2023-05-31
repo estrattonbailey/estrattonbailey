@@ -25,7 +25,7 @@ export async function handler(ev) {
               GitHub
             </a>
             <a
-              href="https://bsky.app/profile/estrattonbailey.bsky.social"
+              href="https://bsky.app/profile/esb.lol"
               target="_blank"
               className="link db"
             >
