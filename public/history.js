@@ -9,6 +9,7 @@
 
   contents.map((item) => {
     const { generated_title, source } = item;
+    if (!source) return ''
     const { url } = source;
     history.innerHTML += `<a href="${url}" target="_blank">${
       generated_title || url.replace(/https?:\/\//, "")
