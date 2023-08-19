@@ -86,7 +86,7 @@ export async function handler(ev) {
               <a href="https://tweeet.link" target="_blank" className="link">
                 tweeet.link
               </a>
-              &nbsp;— &nbsp;<s>Elon</s>&nbsp;broke it, haven't fixed
+              &nbsp;— &nbsp;El*n&nbsp;broke it, haven't fixed
             </p>
 
             <p>
