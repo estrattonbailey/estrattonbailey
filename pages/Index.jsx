@@ -15,7 +15,7 @@ export async function handler(ev) {
         <div className="outer f jcb fw">
           <div className="left-col">
             <h1 className="fs4 mb6">Eric Bailey</h1>
-            <p className="mb6">internet person, books, etymology-curious, barfly<br/><em>Tell me if I ever did a thing</em></p>
+            <p className="mb6">eng @ <a href="https://blueskyweb.xyz/" target="_blank">Bluesky</a> — internet person, books, etymology-curious, barfly<br/><em>Tell me if I ever did a thing</em></p>
 
             <a
               href="https://github.com/estrattonbailey"
