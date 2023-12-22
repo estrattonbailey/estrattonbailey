@@ -31,19 +31,6 @@ export async function handler(ev) {
             >
               Bluesky
             </a>
-            <a
-              href="https://twitter.com/estrattonbailey"
-              target="_blank"
-              className="link db"
-            >
-              Twitter
-            </a>
-            <a
-              href="/notes"
-              className="link db"
-            >
-              Notes
-            </a>
 
             <h1 className="fs4 mb6 mt10">Projects</h1>
 
