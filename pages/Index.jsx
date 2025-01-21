@@ -35,13 +35,6 @@ export async function handler(ev) {
             <h1 className="fs4 mb6 mt10">Projects</h1>
 
             <p>
-              <a href="https://sideby.space/" target="_blank" className="link">
-                Side By Side
-              </a>
-              &nbsp;— IRL coworking space in Chicago
-            </p>
-
-            <p>
               <a href="https://hypercast.dev/" target="_blank" className="link">
                 Hypercast
               </a>
